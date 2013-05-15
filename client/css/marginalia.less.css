@@ -1,0 +1,70 @@
+@base: #000;
+@primary: #009ECF;
+@yellow: #FFEDCC;
+
+body {
+  color: @base;
+  font-size: 15pt;
+  font-family: 'PT Serif', 'Times New Roman', serif;
+}
+
+a {
+  color: @primary;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+
+.article {
+  width: 700px;
+  margin: 0 auto;
+  position: relative;
+  h1.title {
+    font-size: 28pt;
+    font-weight: 700;
+  }
+  div.text {
+    line-height: 150%;
+    *::selection {
+      background: @yellow;
+    }
+  }
+}
+
+*.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+span.highlighted {
+  background-color: @yellow;
+  margin: -2px 0;
+  padding: 2px 0;
+}
+
+mark {
+  background-color: transparent;
+  margin: -1px 0;
+  padding: 1px 0;
+}
+
+mark.highFreq {
+  background-color: rgba(255, 194, 75, 1.0);
+}
+mark.highMidFreq {
+  background-color: rgba(255, 194, 75, 0.8);
+}
+mark.midFreq {
+  background-color: rgba(255, 194, 75, 0.5);
+}
+mark.lowMidFreq {
+  background-color: rgba(255, 194, 75, 0.3);
+}
+mark.lowFreq {
+  background-color: rgba(255, 194, 75, 0.1);
+}
