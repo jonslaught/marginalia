@@ -2,15 +2,15 @@ function assignColor (frequency) {
   var className = "noFreq";
   
   // TODO: replace with generic algorithm
-  if (frequency > 300) {
+  if (frequency > 10000) {
     className = "highFreq"; 
-  } else if (frequency > 100) {
+  } else if (frequency > 7000) {
     className = "highMidFreq";
-  } else if (frequency > 50) {
+  } else if (frequency > 5000) {
     className = "midFreq";
-  } else if (frequency > 10) {
+  } else if (frequency > 3000) {
     className = "lowMidFreq";
-  } else if (frequency > 1) {
+  } else if (frequency > 1000) {
     className = "lowFreq";
   }
 
@@ -18,15 +18,29 @@ function assignColor (frequency) {
 }
 
 
+SOURCE = $.url().param('source');
+VERSION = 'shortones'
+
 $(document).ready(function() {
-// grab all the sentences in the DOM
-$("mark").each(function(index) {
-  var id = $(this).attr("id");
-  var frequency = METADATA[id];
-  if (frequency) {
-    $(this).addClass(assignColor(frequency));
-  }
-});
 
 
+  // Load the HTML file
+  $.get('../data/' + VERSION + '_' + SOURCE + '_marked.html',function(html){
+    $('.article .text').html(html);
+
+    // Load the counts data
+    $.getJSON('../data/' + VERSION + '_' + SOURCE + '_counts.js',function(metadata) {
+
+    // Do the marking
+      $(".marker").each(function(index) {
+        var id = $(this).attr("id");
+        var frequency = metadata[id];
+        console.log([id,frequency]);
+        if (frequency) {
+          $(this).addClass(assignColor(frequency));
+        }
+      });
+
+    });
+  });
 });

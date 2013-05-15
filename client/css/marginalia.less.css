@@ -53,18 +53,18 @@ mark {
   padding: 1px 0;
 }
 
-mark.highFreq {
+.marker.highFreq {
   background-color: rgba(255, 194, 75, 1.0);
 }
-mark.highMidFreq {
+.marker.highMidFreq {
   background-color: rgba(255, 194, 75, 0.8);
 }
-mark.midFreq {
+.marker.midFreq {
   background-color: rgba(255, 194, 75, 0.5);
 }
-mark.lowMidFreq {
+.marker.lowMidFreq {
   background-color: rgba(255, 194, 75, 0.3);
 }
-mark.lowFreq {
+.marker.lowFreq {
   background-color: rgba(255, 194, 75, 0.1);
 }
