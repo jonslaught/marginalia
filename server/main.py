@@ -26,7 +26,7 @@ for source in ARTICLES:
 	output.write(a.html)
 	output.close()
 
-	output = open('../data/%s_%s_snippets.json' % (now,source),'w')
+	output = open('../data/%s_%s_snippets.js' % (now,source),'w')
 	output.write(json.dumps(a.snippets,indent=4))
 	output.close()
 
@@ -36,6 +36,6 @@ for source in ARTICLES:
 		freq = frequency.get_result_counts(a.snippets,max_calls=9999999,pause=1)
 
 		# Save frequency to file
-		output = open('../data/%s_%s_counts.json' % (now,source),'w')
+		output = open('../data/%s_%s_counts.js' % (now,source),'w')
 		output.write(json.dumps(freq,indent=4))
 		output.close()
