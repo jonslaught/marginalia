@@ -4,6 +4,17 @@ import re
 
 # Break an HTML file into snippets of text
 
+"""
+Known bugs
+
+P1: constitution doesn't work - investigate why
+P2: Phrases like Dr. Johnson break on period -- they shouldn't
+
+
+
+
+"""
+
 class Article(object):
 
 	def __init__(self,raw_html):
@@ -14,7 +25,7 @@ class Article(object):
 	def snip(self):
 
 		self.soup = self.find_snippets_in_tag(self.soup)
-		self.html = str(self.soup)
+		self.html = self.soup.prettify(formatter='html')
 		return self.html, self.snippets
 
 	# Decides if a snippet is worth including
@@ -33,8 +44,8 @@ class Article(object):
 			id = len(self.snippets)
 			#start_marker = '{%s{' % id
 			#end_marker = '}%s}' % id
-			start_marker = '<mark id="%s">' % id
-			end_marker = '</mark>'
+			start_marker = '<span class="marker" id="%s">' % id
+			end_marker = '</span>'
 			
 			self.snippets[id] = {
 				'html': contents_html,
@@ -96,7 +107,7 @@ class Article(object):
 			else:
 
 				# Build up the current snippet
-				text_block += str(child)
+				text_block += unicode(child)
 
 		# If there's anything left
 		if text_block:

@@ -3,29 +3,39 @@ import frequency
 import time
 import json
 
-now = int(time.time())
-ARTICLE = 'howto'
+#now = int(time.time())
+now = 'shortones'
+#ARTICLES = ['davidsimon','googlemaps','kevinkelly','mlkdream','stevejobs','whymilk']
+#ARTICLES = ['mlkdream','stevejobs','whymilk']
+ARTICLES = ['mlkdream']
+GET_FREQ = True
 
-# Open a file, load into an article
-input = open('../data/articles/%s.html' % ARTICLE,'r')
-a = snippets.Article(input.read())
 
-# Break it into snippets
-html, snippets = a.snip()
+for source in ARTICLES:
+	print 'Reading %s' % source
 
-# Save marked file
-output = open('../data/%s_%s_marked.html' % (now,ARTICLE),'w')
-output.write(a.html)
-output.close()
+	# Open a file, load into an article
+	input = open('../data/articles/%s.html' % source,'r')
+	a = snippets.Article(input.read())
 
-output = open('../data/%s_%s_snippets.json' % (now,ARTICLE),'w')
-output.write(json.dumps(a.snippets,indent=4))
-output.close()
+	# Break it into snippets
+	a.snip()
 
-# Measure frequency
-freq = frequency.get_result_counts(a.snippets,max_calls=50,pause=0.5)
+	# Save marked file
+	output = open('../data/%s_%s_marked.html' % (now,source),'w')
+	output.write(a.html)
+	output.close()
 
-# Save frequency to file
-output = open('../data/%s_%s_counts.json' % (now,ARTICLE),'w')
-output.write(json.dumps(freq,indent=4))
-output.close()
+	output = open('../data/%s_%s_snippets.json' % (now,source),'w')
+	output.write(json.dumps(a.snippets,indent=4))
+	output.close()
+
+	if GET_FREQ:
+
+		# Measure frequency
+		freq = frequency.get_result_counts(a.snippets,max_calls=9999999,pause=1)
+
+		# Save frequency to file
+		output = open('../data/%s_%s_counts.json' % (now,source),'w')
+		output.write(json.dumps(freq,indent=4))
+		output.close()

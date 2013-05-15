@@ -4,10 +4,9 @@ import random, time
 
 # Count the frequency of each snippet
 
-def get_result_counts(snippets,pause=1,max_calls=1000,logtext='frequency_log.txt'):
+def get_result_counts(snippets,pause=1,max_calls=1000):
 
 	freq = {}
-	t = open(logtext,'a')
 
 	for id, s in snippets.items()[:max_calls]:
 
@@ -27,15 +26,12 @@ def get_result_counts(snippets,pause=1,max_calls=1000,logtext='frequency_log.txt
 		# Save results
 		freq[id] = result_count
 
-		# Print to file
-		print [id,result_count,s['text']]
-		print >> t, '%s|%d|%s' % (id,result_count,s['text'])
-		t.flush()
+		# Print updates
+		print [id,result_count,normalized]
 
 		# Politeness
 		time.sleep(pause + random.random()) # in seconds
 
 
-	t.close()
 	return freq
 
