@@ -4,10 +4,11 @@ import time
 import json
 
 #now = int(time.time())
-now = 'shortones'
+now = '5-16'
 #ARTICLES = ['davidsimon','googlemaps','kevinkelly','mlkdream','stevejobs','whymilk']
 #ARTICLES = ['mlkdream','stevejobs','whymilk']
-ARTICLES = ['mlkdream']
+ARTICLES = ['davidsimon','kevinkelly','stevejobs','whymilk']
+#ARTICLES = ['mlkjail','lizlemon','socialnetwork','benham','klout','future','davidsimon','kevinkelly','googlemaps','howto']
 GET_FREQ = True
 
 
@@ -33,7 +34,7 @@ for source in ARTICLES:
 	if GET_FREQ:
 
 		# Measure frequency
-		freq = frequency.get_result_counts(a.snippets,max_calls=9999999,pause=1)
+		freq = frequency.get_result_counts(a.snippets,max_calls=9999999,pause=0)
 
 		# Save frequency to file
 		output = open('../data/%s_%s_counts.js' % (now,source),'w')

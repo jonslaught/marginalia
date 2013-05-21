@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup
+from unidecode import unidecode
 from bs4.element import NavigableString, Tag
 import re
 
@@ -37,7 +38,7 @@ class Article(object):
 	def mark_snippet(self,in_html,start,end):
 
 		contents_html = in_html[start:end]
-		contents_text = BeautifulSoup(contents_html).text
+		contents_text = unidecode(BeautifulSoup(contents_html).text)
 
 		if self.is_worth_snipping(contents_text):
 

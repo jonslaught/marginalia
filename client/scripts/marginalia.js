@@ -33,7 +33,7 @@ function NTile (array, n) {
 
 
 SOURCE = $.url().param('source');
-VERSION = 'shortones'
+VERSION = '5-16'
 
 $(document).ready(function() {
   // Load the HTML file
@@ -53,6 +53,7 @@ $(document).ready(function() {
         var frequency = metadata[id];
         if (frequency) {
           $(this).addClass(nTile.assignColor(frequency));
+          $(this).attr('title',frequency)
         }
       });
     });

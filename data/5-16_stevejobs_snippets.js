@@ -84,7 +84,7 @@
         "html": "And much of what I stumbled into by following my curiosity and intuition turned out to be priceless later on."
     }, 
     "21": {
-        "text": "I didn't have a dorm room, so I slept on the floor in friends' rooms, I returned coke bottles for the 5\u00a2 deposits to buy food with, and I would walk the 7 miles across town every Sunday night to get one good meal a week at the Hare Krishna temple.", 
+        "text": "I didn't have a dorm room, so I slept on the floor in friends' rooms, I returned coke bottles for the 5C/ deposits to buy food with, and I would walk the 7 miles across town every Sunday night to get one good meal a week at the Hare Krishna temple.", 
         "html": "I didn't have a dorm room, so I slept on the floor in friends' rooms, I returned coke bottles for the 5\u00a2 deposits to buy food with, and I would walk the 7 miles across town every Sunday night to get one good meal a week at the Hare Krishna temple."
     }, 
     "22": {
@@ -148,7 +148,7 @@
         "html": "This approach has never let me down, and it has made all the difference in my life."
     }, 
     "37": {
-        "text": "You have to trust in something \u2014 your gut, destiny, life, karma, whatever.", 
+        "text": "You have to trust in something -- your gut, destiny, life, karma, whatever.", 
         "html": "You have to trust in something \u2014 your gut, destiny, life, karma, whatever."
     }, 
     "38": {
@@ -184,7 +184,7 @@
         "html": "How can you get fired from a company you started?"
     }, 
     "46": {
-        "text": "We had just released our finest creation \u2014 the Macintosh \u2014 a year earlier, and I had just turned 30.", 
+        "text": "We had just released our finest creation -- the Macintosh -- a year earlier, and I had just turned 30.", 
         "html": "We had just released our finest creation \u2014 the Macintosh \u2014 a year earlier, and I had just turned 30."
     }, 
     "47": {
@@ -196,7 +196,7 @@
         "html": "Woz and I started Apple in my parents garage when I was 20."
     }, 
     "49": {
-        "text": "I was lucky \u2014 I found what I loved to do early in life.", 
+        "text": "I was lucky -- I found what I loved to do early in life.", 
         "html": "I was lucky \u2014 I found what I loved to do early in life."
     }, 
     "50": {
@@ -212,7 +212,7 @@
         "html": "The turn of events at Apple had not changed that one bit."
     }, 
     "53": {
-        "text": "But something slowly began to dawn on me \u2014 I still loved what I did.", 
+        "text": "But something slowly began to dawn on me -- I still loved what I did.", 
         "html": "But something slowly began to dawn on me \u2014 I still loved what I did."
     }, 
     "54": {
@@ -320,7 +320,7 @@
         "html": "Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose."
     }, 
     "80": {
-        "text": "Because almost everything \u2014 all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important.", 
+        "text": "Because almost everything -- all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important.", 
         "html": "Because almost everything \u2014 all external expectations, all pride, all fear of embarrassment or failure - these things just fall away in the face of death, leaving only what is truly important."
     }, 
     "81": {
@@ -416,7 +416,7 @@
         "html": "Don't let the noise of others' opinions drown out your own inner voice."
     }, 
     "104": {
-        "text": "Don't be trapped by dogma \u2014 which is living with the results of other people's thinking.", 
+        "text": "Don't be trapped by dogma -- which is living with the results of other people's thinking.", 
         "html": "Don't be trapped by dogma \u2014 which is living with the results of other people's thinking."
     }, 
     "105": {
